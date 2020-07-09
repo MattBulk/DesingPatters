@@ -7,7 +7,7 @@
         "request": "launch",
         "program": "${fileDirname}/${fileBasenameNoExtension}",
         "args": [],
-        "stopAtEntry": true,
+        "stopAtEntry": false,
         "cwd": "${workspaceFolder}",
         "environment": [],
         "externalConsole": false,
@@ -19,7 +19,7 @@
             "ignoreFailures": true
           }
         ],
-        "preLaunchTask": "DesignPattern",
+        "preLaunchTask": "designPatterns",
         "miDebuggerPath": "/usr/bin/gdb"
       }
     ]
