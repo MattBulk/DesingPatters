@@ -8,7 +8,11 @@ int main (int argc, char *argv[]) {
     
     std::cout << "Desing Pattern Repo" << std::endl;
 
-    openClosedExample();
+    // openClosedExample();
+    // simpleBuilder();
+    // communicatingIntent();
+    // groovyExample();
+    compositeExample();
 
     return 0; 
 }

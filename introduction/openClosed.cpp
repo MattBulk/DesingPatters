@@ -14,11 +14,19 @@ struct Product {
 
 typedef std::vector<Product*> Items;
 
-template <typename T>
-class Specification {
+// forward declaration
+template<typename T>
+class AndSpecification;
 
+template <typename T>
+class Specification 
+{
 public:
     virtual bool isSatisfied(T* item) = 0;
+
+    AndSpecification<T> operator &&(Specification&& other) {
+        return AndSpecification<T>(*this, other);   
+    }
 };
 
 template <typename T>
@@ -29,6 +37,8 @@ public:
 
 class ColorSpecification : public Specification<Product>
 {
+private:
+    Color color;
 public:
     ColorSpecification(const Color color) : color{color} {}  // color = color;
     ~ColorSpecification() { }
@@ -36,10 +46,35 @@ public:
     bool isSatisfied(Product* item) override {
         return item->color == color;
     }
-public:
-    Color color;
-
 };
+
+class SizeSpecification : public Specification<Product>
+{
+private:
+    Size size;
+public:
+    SizeSpecification(const Size sz) : size{sz} {}  // color = color;
+    ~SizeSpecification() { }
+
+    bool isSatisfied(Product* item) override {
+        return item->size == size;
+    }
+};
+
+template <typename T>
+class AndSpecification : public Specification<T>
+{
+private:
+    Specification<T>& first; 
+    Specification<T>& second;
+public:
+    AndSpecification(Specification<T>& first, Specification<T> &second) : first(first), second(second) { }
+
+    bool isSatisfied(T* item) override {
+        return first.isSatisfied(item) && second.isSatisfied(item);
+    }
+};
+
 
 class BetterFilter : public Filter<Product>
 {
@@ -59,7 +94,7 @@ public:
     }
 };
 
-
+// example
 
 void openClosedExample() {
     Product apple{ "Apple", Color::Green, Size::Small };
@@ -79,5 +114,11 @@ void openClosedExample() {
         print(i->name, " is green.");
     }
     
+    auto greenAndBig = ColorSpecification(Color::Green) && SizeSpecification(Size::Large);
 
+    auto bigGreenThings = bf.filter(all, greenAndBig);
+    for (auto &&i : bigGreenThings)
+    {
+        print(i->name, " is large and green.");
+    }
 }
