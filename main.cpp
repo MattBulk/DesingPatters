@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "introduction/openClosed.h"
-#include "creationals/builder.h"
+#include "00-Intro/openClosed.h"
+#include "02-Builder/builder.h"
 
 
 int main (int argc, char *argv[]) { 
@@ -12,7 +12,7 @@ int main (int argc, char *argv[]) {
     // simpleBuilder();
     // communicatingIntent();
     // groovyExample();
-    compositeExample();
+    // compositeExample();     // need to separate classes
 
     return 0; 
 }
