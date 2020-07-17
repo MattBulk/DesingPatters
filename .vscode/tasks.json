@@ -3,15 +3,14 @@
  "tasks": [
   {
    "type": "shell",
-   "label": "g++ build active sfmlfile",
+   "label": "desingPatterns",
    "command": "/usr/bin/g++",
    "args": [
     "-g",
     "${workspaceFolder}/*.cpp",
     "${workspaceFolder}/*/*.cpp",
     "-o",
-    "${fileDirname}/${fileBasenameNoExtension}",
-    "${fileDirname}/Composite/Composite.cpp"
+    "${fileDirname}/${fileBasenameNoExtension}"
    ],
    "options": {
     "cwd": "${workspaceFolder}"

@@ -17,5 +17,6 @@ int main (int argc, char *argv[]) {
     // compositeExample();     // need to separate classes
     pimplExample();
     bridgeExample();
+    creatureExample();
     return 0; 
 }
