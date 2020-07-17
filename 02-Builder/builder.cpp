@@ -219,6 +219,6 @@ PersonJobBuilder PersonBuilderBase::works() const {
 
 void compositeExample() {
 
-    Person p = Person::create().lives().at("123");
+    // to do
 
 }

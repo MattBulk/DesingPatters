@@ -3,6 +3,7 @@
 
 #include "../commons.h"
 
+class PersonBuilder;
 
 class Person
 {
@@ -21,8 +22,7 @@ public:
     ~Person() {}
 
     static Person& create() {
-        PersonBuilder builder;
-        return builder.p;
+        
     }
 };
 

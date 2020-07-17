@@ -1,27 +1,28 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "shell",
-			"label": "designPatterns",
-			"command": "/usr/bin/g++",
-			"args": [
-				"-g",
-				"${workspaceFolder}/*.cpp",
-				"${workspaceFolder}/*/*.cpp",
-				"-o",
-				"${fileDirname}/${fileBasenameNoExtension}"
-			],
-			"options": {
-				"cwd": "${workspaceFolder}"
-			},
-			"problemMatcher": [
-				"$gcc"
-			],
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			}
-		}
-	]
+ "version": "2.0.0",
+ "tasks": [
+  {
+   "type": "shell",
+   "label": "g++ build active sfmlfile",
+   "command": "/usr/bin/g++",
+   "args": [
+    "-g",
+    "${workspaceFolder}/*.cpp",
+    "${workspaceFolder}/*/*.cpp",
+    "-o",
+    "${fileDirname}/${fileBasenameNoExtension}",
+    "${fileDirname}/Composite/Composite.cpp"
+   ],
+   "options": {
+    "cwd": "${workspaceFolder}"
+   },
+   "problemMatcher": [
+    "$gcc"
+   ],
+   "group": {
+    "kind": "build",
+    "isDefault": true
+   }
+  }
+ ]
 }

@@ -2,6 +2,8 @@
 
 #include "00-Intro/openClosed.h"
 #include "02-Builder/builder.h"
+#include "07-Bridge/bridge.h"
+#include "08-Composite/composite.h"
 
 
 int main (int argc, char *argv[]) { 
@@ -13,6 +15,7 @@ int main (int argc, char *argv[]) {
     // communicatingIntent();
     // groovyExample();
     // compositeExample();     // need to separate classes
-
+    pimplExample();
+    bridgeExample();
     return 0; 
 }
