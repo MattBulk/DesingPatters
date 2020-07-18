@@ -18,5 +18,6 @@ int main (int argc, char *argv[]) {
     pimplExample();
     bridgeExample();
     creatureExample();
+    groupingObjectExample();
     return 0; 
 }

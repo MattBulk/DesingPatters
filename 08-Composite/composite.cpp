@@ -60,3 +60,49 @@ void creatureExample() {
     print("average: ", creature.average());
     print("max: ", creature.max());
 }
+
+class CircleComp : public GraphicObjectComp
+{
+private:
+	/* data */
+public:
+	CircleComp(/* args */) {}
+	~CircleComp() {}
+
+	void draw() override {
+		print("Circle", "");
+	}
+};
+
+class GroupComp : public GraphicObjectComp
+{
+public:
+	std::string name;
+
+	std::vector<GraphicObjectComp*> objects;
+public:
+	explicit GroupComp(const std::string &name) : name(name) {}
+	~GroupComp() {}
+
+	void draw() override {
+		std::cout << "Group " << name << "contains:" << std::endl;
+		for (auto &&o : objects)
+		{
+			o->draw();
+		}
+		
+	}
+};
+
+void groupingObjectExample() {
+	GroupComp root("root");
+	CircleComp c1, c2;
+	root.objects.push_back(&c1);
+
+	GroupComp subgroup("sub");
+	subgroup.objects.push_back(&c2);
+
+	root.objects.push_back(&subgroup);
+
+	root.draw();
+}
