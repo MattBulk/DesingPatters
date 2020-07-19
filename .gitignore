@@ -1,6 +1,8 @@
 main
 .vscode/tasks
 .vscode/launch
-introduction/openClosed
-creationals/builder
+00-Intro/openClosed
+02-Builder/builder
+07-Bridge/bridge
 08-Composite/someneurons
+09-Decorator/decorator
