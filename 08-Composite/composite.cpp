@@ -106,3 +106,15 @@ void groupingObjectExample() {
 
 	root.draw();
 }
+
+void neuralExample() {
+	Neuron neuron1, neuron2;
+	NeuronLayer layer1(4), layer2(5);
+
+	neuron1.connect_to(neuron2);
+	neuron2.connect_to(layer1);
+
+	layer1.connect_to(neuron1);
+	layer2.connect_to(neuron2);
+
+}

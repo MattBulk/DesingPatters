@@ -19,5 +19,6 @@ int main (int argc, char *argv[]) {
     bridgeExample();
     creatureExample();
     groupingObjectExample();
+    neuralExample();
     return 0; 
 }
