@@ -69,3 +69,24 @@ void decoFirstExample() {
 
     std::cout << myCircle.str() << std::endl;
 }
+
+void staticDecoExample() {
+    
+    // ColoredShapeStatic<TransparentShapeStatic<SquareDeco>> sq = {"red", 51, 5};
+    
+}
+
+template<typename T>
+auto makeLogger2(T func, const std::string &name) {
+        return Logger2<T>{func, name};
+}
+
+
+void functionalDecoExample() {
+    auto lambda = []() { print("Hello ", " "); };
+    // Logger
+    Logger(lambda, "Hello Function")();
+    // Logger 2
+    auto call = makeLogger2(lambda, "Hello Function");
+    call();
+}

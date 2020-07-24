@@ -21,7 +21,8 @@ int main (int argc, char *argv[]) {
     // creatureExample();
     // groupingObjectExample();
     // neuralExample();
-    decoFirstExample();
+    // decoFirstExample();
+    functionalDecoExample();
     return 0; 
 }
 
