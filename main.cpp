@@ -5,7 +5,7 @@
 #include "07-Bridge/bridge.h"
 #include "08-Composite/composite.h"
 #include "09-Decorator/decorator.h"
-
+#include "12-Proxy/proxy.h"
 
 int main (int argc, char *argv[]) { 
     
@@ -22,7 +22,9 @@ int main (int argc, char *argv[]) {
     // groupingObjectExample();
     // neuralExample();
     // decoFirstExample();
-    functionalDecoExample();
+    // functionalDecoExample();
+    // smartPointerExample();
+    lazyExample();
     return 0; 
 }
 
