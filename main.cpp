@@ -27,7 +27,10 @@ int main (int argc, char *argv[]) {
     // functionalDecoExample();
     // smartPointerExample();
     // lazyExample();
-    baseChainExample();
+    // baseChainExample();
+    // commandExample();
+    // compositeCommandExample();
+    commandQuerySeparationExample();
     return 0; 
 }
 
