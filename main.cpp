@@ -6,6 +6,8 @@
 #include "08-Composite/composite.h"
 #include "09-Decorator/decorator.h"
 #include "12-Proxy/proxy.h"
+#include "13-Chain_of_resp/chain.h"
+#include "14-Command/command.h"
 
 int main (int argc, char *argv[]) { 
     
@@ -24,7 +26,8 @@ int main (int argc, char *argv[]) {
     // decoFirstExample();
     // functionalDecoExample();
     // smartPointerExample();
-    lazyExample();
+    // lazyExample();
+    baseChainExample();
     return 0; 
 }
 
