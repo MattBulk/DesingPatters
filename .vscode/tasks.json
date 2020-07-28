@@ -6,7 +6,7 @@
 			"label": "C/C++: g++ build active file",
 			"command": "/usr/bin/g++",
 			"args": [
-				"-I /home/badjoker/Documents/UTILS/boost_1_73_0",
+				"-I /usr/local/include/boost",
 				"-g",
 				"${workspaceFolder}/*.cpp",
 				"${workspaceFolder}/*/*.cpp",

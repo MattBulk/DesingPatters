@@ -9,6 +9,7 @@
 #include "13-Chain_of_resp/chain.h"
 #include "14-Command/command.h"
 
+
 int main (int argc, char *argv[]) { 
     
     std::cout << "Desing Pattern Repo" << std::endl;
@@ -28,9 +29,10 @@ int main (int argc, char *argv[]) {
     // smartPointerExample();
     // lazyExample();
     // baseChainExample();
+    brokenChainExample();
     // commandExample();
     // compositeCommandExample();
-    commandQuerySeparationExample();
+    // commandQuerySeparationExample();
     return 0; 
 }
 

@@ -20,3 +20,17 @@ void baseChainExample() {
 
     print("Base Chain Example ", goblin);
 }
+
+void brokenChainExample() {
+    Game game;
+    CreatureB goblin{game, "Strong Goblin", 2, 2};
+    goblin.getAttach();
+    std::cout<< goblin.name << " " << goblin.attack << " " << goblin.defense << std::endl;
+    {
+      DAMod dam{game, goblin};
+      goblin.attack = goblin.getAttach();
+      std::cout<< goblin.name << " " << goblin.attack << " " << goblin.defense << std::endl;
+    }
+    goblin.attack = goblin.getAttach();
+    std::cout<< goblin.name << " " << goblin.attack << " " << goblin.defense << std::endl;    
+}
