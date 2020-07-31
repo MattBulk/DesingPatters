@@ -8,7 +8,7 @@
 #include "12-Proxy/proxy.h"
 #include "13-Chain_of_resp/chain.h"
 #include "14-Command/command.h"
-
+#include "17-Mediator/mediator.h"
 
 int main (int argc, char *argv[]) { 
     
@@ -29,10 +29,12 @@ int main (int argc, char *argv[]) {
     // smartPointerExample();
     // lazyExample();
     // baseChainExample();
-    brokenChainExample();
+    // brokenChainExample();
     // commandExample();
     // compositeCommandExample();
     // commandQuerySeparationExample();
+    mediatorExample();
+    mediatorSignalExample();
     return 0; 
 }
 
