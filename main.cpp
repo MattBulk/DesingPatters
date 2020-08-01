@@ -10,6 +10,7 @@
 #include "14-Command/command.h"
 #include "17-Mediator/mediator.h"
 #include "19-NullObject/nullobject.h"
+#include "22-Strategy/strategy.h"
 
 int main (int argc, char *argv[]) { 
     
@@ -36,7 +37,8 @@ int main (int argc, char *argv[]) {
     // commandQuerySeparationExample();
     // mediatorExample();
     // mediatorSignalExample();
-    nullObjectExample();
+    // nullObjectExample();
+    dynamicStrategyExample();
     return 0; 
 }
 
