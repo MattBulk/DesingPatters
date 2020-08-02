@@ -39,6 +39,7 @@ int main (int argc, char *argv[]) {
     // mediatorSignalExample();
     // nullObjectExample();
     dynamicStrategyExample();
+    staticStrategyExample();
     return 0; 
 }
 

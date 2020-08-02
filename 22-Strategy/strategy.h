@@ -100,6 +100,34 @@ public:
 
 void dynamicStrategyExample();
 
+template<typename LS>
+class TextProcessor2
+{
+private:
+    /* data */
+    std::ostringstream oss;
+    LS list_strategy;
+
+public:
+    TextProcessor2() {
+        
+    }
+    ~TextProcessor2() {}
+
+    void append_list(const std::vector<std::string> items)
+    {
+        list_strategy.start(oss);
+        for (auto &item : items)
+            list_strategy.add_list_item(oss, item);
+        list_strategy.end(oss);
+    }
+
+    std::string toString() const {
+        return oss.str();
+    }
+    
+};
+
 void staticStrategyExample();
 
 #endif
