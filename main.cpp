@@ -11,6 +11,7 @@
 #include "17-Mediator/mediator.h"
 #include "19-NullObject/nullobject.h"
 #include "22-Strategy/strategy.h"
+#include "23-Template/template.h"
 
 int main (int argc, char *argv[]) { 
     
@@ -38,8 +39,9 @@ int main (int argc, char *argv[]) {
     // mediatorExample();
     // mediatorSignalExample();
     // nullObjectExample();
-    dynamicStrategyExample();
-    staticStrategyExample();
+    // dynamicStrategyExample();
+    // staticStrategyExample();
+    templateExample();
     return 0; 
 }
 
