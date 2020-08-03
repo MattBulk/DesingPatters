@@ -44,6 +44,7 @@ int main (int argc, char *argv[]) {
     // staticStrategyExample();
     // templateExample();
     intrusiveExample();
+    reflectiveExample();
     return 0; 
 }
 
